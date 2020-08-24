@@ -1,0 +1,15 @@
+수업진행방향 20일 
+
+1.js 
+2. jquery
+3. UI App (아코디언 같은기능 3,4가지)  여기까지는 오직 코딩으로만 
+4. Gallery (갤러리)  -프레임워크를 좀쓸거다 -Json 
+5. api project  
+
+
+
+
+open in browser 설치
+Alt+b 를 누르면 브라우저가 자동으로 열림.
+
+ 

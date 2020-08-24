@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Local</title>
+</head>
+<body>
+    <p>Hello </p>
+
+
+    <script>
+        var global="global";
+
+        function exp() {
+            document.write("함수영역");
+            var local = "local";
+            document.write("a"+global+"<br>");
+            document.write(local+"<br>");
+        }
+
+        exp();
+        document.write("b"+global);
+        document.write(local);  // 이게 안나오는 이유는 지역변수안에서 선언했기 때문이다.
+
+        //자바스크립트 영역은 함수의 안쪽과 바같쪽으로 구분된다.
+        //바깥쪽을 전역, 안쪽을 지역이라 부른다.
+        //전역 변수는 함수 외부와 내부 모두에서 사용가능하다.
+        //함수 안에 정의된 지역변수는 함ㅅ내부에서만 사용가능하다.
+    </script>
+</body>
+</html>
