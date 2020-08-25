@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare</title>
+</head>
+<body>
+    <script>
+        var a=4;
+        var b=2;
+
+        document.write(a=b,"<br>  ");
+        document.write(a==b, "<br>");
+        document.write(a===b,"<br>");
+        document.write(a<b, "<br>");
+
+
+        var c=7;
+        var d='7';
+
+        document.write(c==d, "<br>");
+        document.write(c===d,"<br>"); // 형태와 값이 다같아야 true 가 나온다. 
+
+        document.write("--------------------<br>");
+        
+        var e =7;
+        var f = 10;
+        var g =9;
+        var h= 11;
+
+        document.write(e < f && g < e,"<br>");
+
+        document.write("---------------------<br>");
+        var i= (e%2==0) ? "짝수" : "홀수";
+
+        document.write(i,"<br>");
+    </script>
+</body>
+</html>
