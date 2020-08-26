@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        .tabPanel{width:100%; height:auto; padding:150px 0; text-align:center; background:red; }
+        .tabPanel h1{color:#fff;}
+        .tapPanel p{color:#fff;}
+        button{display:block; float:left; width:25%; box-sizing:border-box; border:0; padding:10px 20px; text-align:center;   outline:0;}
+        #london{background:red;}
+        #paris{background:green;}
+        #seoul{background:blue;}
+        #oslo{background:orange;}
+
+        
+    </style>
+
+</head>
+<body>
+    <div id="london" class="tabPanel">
+        <h1>London
+        </h1>    
+        <p>London is the capital city of England</p>
+
+    </div>
+
+    <div id="paris" class="tabPanel">
+        <h1>Paris
+        </h1>    
+        <p>Paris is the capital city of France</p>
+
+    </div>
+
+    <div id="seoul" class="tabPanel">
+        <h1>Seoul
+        </h1>    
+        <p>Seoul is the capital city of Korea</p>
+
+    </div>
+
+    <div id="oslo" class="tabPanel">
+        <h1>Oslo
+        </h1>    
+        <p>Oslo is the capital city of Norway</p>
+
+    </div>
+
+    <div class="btns">
+    <button type="button" value="red" >London</button>
+    <button type="button" value="green">Paris</button>
+    <button type="button" value="blue">Seoul</button>
+    <button type="button" value="orange">Oslo</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function() {
+                var index =$(this).index();
+                var color=$(this).attr("value");
+                alert(color);
+                
+                $("button").css({
+                    "background":"","color":''
+                });  // 첫번재가 속성이고 뒤에가 값이다. 여러개를 사용하려면 중괄호로 묶고 반점을 : 로 바꿔준다.
+                $(this).css({
+                    "background":color,"color":"#fff"
+                });
+
+                $(".tabPanel").hide();
+                $(".tabPanel").eq(index).show();
+            
+            });
+            $("button").eq(0).trigger("click");            
+        });
+
+    </script>
+</body>
+</html>

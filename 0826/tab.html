@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        .tabPanel{width:100%; height:auto; padding:150px 0; text-align:center; background:red; }
+        .tabPanel h1{color:#fff;}
+        .tapPanel p{color:#fff;}
+        button{display:block; float:left; width:25%; box-sizing:border-box; border:0; padding:10px 20px; text-align:center;   outline:0;}
+        #london{background:red;}
+        #paris{background:green;}
+        #seoul{background:blue;}
+        #oslo{background:orange;}
+    </style>
+
+</head>
+<body>
+    <div id="london" class="tabPanel">
+        <h1>London
+        </h1>    
+        <p>London is the capital city of England</p>
+
+    </div>
+
+    <div id="paris" class="tabPanel">
+        <h1>Paris
+        </h1>    
+        <p>Paris is the capital city of France</p>
+
+    </div>
+
+    <div id="seoul" class="tabPanel">
+        <h1>Seoul
+        </h1>    
+        <p>Seoul is the capital city of Korea</p>
+
+    </div>
+
+    <div id="oslo" class="tabPanel">
+        <h1>Oslo
+        </h1>    
+        <p>Oslo is the capital city of Norway</p>
+
+    </div>
+    <button type="button" onclick="openCity('london',this,'red')" id="default">London</button>
+    <button type="button" onclick="openCity('paris',this,'green')">Paris</button>
+    <button type="button" onclick="openCity('seoul',this,'blue')">Seoul</button>
+    <button type="button" onclick="openCity('oslo',this,'orange')">Oslo</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function openCity(cityName,el,color) {
+
+    var panel = document.getElementsByClassName('tabPanel');
+    var tabs=document.getElementsByTagName('button');
+
+        for(var i=0; i<4; i++) {
+            panel[i].style.display="none";
+            tabs[i].style.backgroundColor="";
+            tabs[i].style.color="#000";
+        }
+
+        document.getElementById(cityName).style.display="block";
+        el.style.backgroundColor=color;
+
+        }
+    document.getElementById('default').click();
+
+    
+
+    </script>
+</body>
+</html>
