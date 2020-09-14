@@ -1,0 +1,26 @@
+*{margin:0; padding:0;}
+ol, ul {list-style:none;}
+a{text-decoration:none; color:#aaa;}
+
+
+
+.wrap{width:100%; height:auto;}
+.clear:after{display:block; content:''; clear:both;}
+.center{width: 100%; max-width:1280px;  height:auto; margin:auto; }
+
+.section{padding:100px 0; box-sizing:border-box;}
+
+/* header css*/
+header{text-align:center; box-shadow:1px 0 3px #ccc;}  /* 위에서 아래로 1px , 왼쪽에서 오른쪽으로 0 , 그림자가 퍼지는크기 3px */
+header h2{padding:10px 0;}  /* 위아래 10 px  좌우로 0 */
+header h2 a{color:#111;}
+
+.slideBox{width:80%; height:auto; margin:auto; overflow:hidden; position:relative;}
+.slideBox .slides{width:400%; height:auto; position:relative;}   /* 자식요소는 한칸 띄어야 한다. 붙여 쓰면 인식못함 */
+.slideBox .slides .slide{width:25%; height:auto; float:left;}      /* 자식요소는 한칸 띄어야 한다. 붙여 쓰면 인식못함 */
+.slideBox .slides .slide img{width:100%;}       /* 자식요소는 한칸 띄어야 한다. 붙여 쓰면 인식못함 */
+
+
+.navigation{position:absolute; top:50%; transform:translateY(-50%); width:100%; display:flex; justify-content:space-between; }
+/* 양쪽정면을 어떻게 할것인가 를 한다 justify  display랑 같이씀 */
+.navigation a{font-size:30px; font-weight:bold; color:#fff;}
