@@ -1,0 +1,13 @@
+@media screen and (max-width:1280px){
+    .center{box-sizing:border-box; padding: 0 15px;}
+}
+
+@media screen and (max-width:700px){
+    .center{padding: 0 25px;}  /* +버튼 앞으로 가느냔 뒤로 가느냐 */
+    
+    header .gnb {display:block; position:fixed; width:40%; background:rgba(0,0,0,0.6); right:-70%; top:0; height:100%; box-sizing:border-box; padding:70px 0;}
+    header .gnb li{float:none; text-align:right;}
+    header .gnb li a{color:#fff; font-size:14px; padding:10px 30px;}
+
+    .mobile{display:block;}
+}
