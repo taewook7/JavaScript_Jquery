@@ -1,0 +1,20 @@
+구글에 xampp 검색
+https://www.apachefriends.org/index.html 
+윈도우 설치
+(본체에있는 하드디스크를 가상으로 서버로 만들어준다.마치 호스팅된거처럼
+filezilla,머큐리,톰캣,펄,웹아이질러,페이크 체크해제 후 넥스트
+
+]
+c드라이브에 xmapp 로가서 htdocs 에 폴더를만들고 
+vscode 에올렸다. 
+
+파일이 index 일경우  안적어도 자동으로 연결된다. 
+localhost/example (폴더) 
+
+
+카페24 에서 호스팅 사도 됨 
+
+https://www.w3schools.com/jquery/jquery_ref_ajax.asp
+자주쓰는건 겟제이슨,겟,
+
+masonry 검색 
