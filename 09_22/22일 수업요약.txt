@@ -1,0 +1,5 @@
+xampp 폴더 들어가서 컨트롤 누른다.
+start 하면 됨 
+아파치랑 mysql 
+
+dabipyeung.com/hubble 
