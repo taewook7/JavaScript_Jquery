@@ -1,0 +1,74 @@
+/* reset css*/
+*{margin:0; padding:0;}
+ol, ul {list-style:none;}
+a{text-decoration:none; color:#aaa;}
+
+
+/* general css */
+.wrap{width:100%; height:auto;}
+.clear:after{display:block; content:''; clear:both;}  
+/* 대부분 이렇게쓴다 클리어는 갖다쓰면됨 ..  */
+.center{width: 100%; max-width:1280px;  height:auto; margin:auto; }
+
+.section{padding:100px 0; box-sizing:border-box; text-align: center;}
+
+
+/* header css */
+header{width:100%; height:auto;box-sizing:border-box; border:1px solid #aaa; background: #fff;}
+
+header #header{display:flex; justify-content: space-between; align-items: center;}
+header .logo a{text-transform: uppercase; font-size:20px; color:#111;}
+
+header .gnb{position: relative;}
+header .gnb .underline{display:block; position: absolute; width:100%; height:3px; background:#111; bottom:0;}
+header .gnb li{float:left;}
+header .gnb li a{padding:20px 30px; box-sizing:border-box; display:block; text-transform:uppercase; color:#111; font-size:16px; font-weight:bold;}
+
+
+/* mobile icon css */
+.mobile{width:24px; height:24px;  margin:15px 0; position:relative; transition:all 0.3s; display:none;}
+.mobile.rotate{transform:rotate(135deg);}
+.mobile.rotate>span{background:#fff;}  
+
+.mobile>span{position:absolute; background:#111; display:block;}
+.mobile>span:nth-child(1){width:100%; height:2px; top:50%; transform:translateY(-50%);}
+.mobile>span:nth-child(2){width:2px; height:100%; left:50%; transform:translateX(-50%);}
+
+
+/* wraping images css */
+.imgWrap{width:100%; height:auto;}
+.imgWrap .imgItem{width:25%; height: 200px; overflow:hidden; float:left; box-sizing:border-box;  
+border: 5px solid #fff; padding:5px; display:none;} 
+
+
+
+/* 화면에 넘치지 않게 하기 위해서 오버플로우 히든을 설정한다. */
+.imgWrap .imgItem img{width:100%; position:absolute; left:0; top:50%; transform:translateY(-50%);}
+.imgWrap .imgItem>div{box-sizing:border-box; border: 5px solid #fff; position:relative; height:100%; overflow:hidden; box-shadow:0 0 2px red;}
+
+
+
+/* 사진 사이에 공간을 띄우기 위해 box-shadow 2px 만큼 떨어뜨린다. */
+.imgWrap .imgItem span{width:100%; height:100%; display:block; position:absolute; top:0; left:0; background:#ccc; background:rgba(0,0,0,0.6); display:flex;
+justify-content: center; align-items: center; transition: all 0.4s; opacity:0;}
+
+.imgWrap .imgItem span:hover{opacity:1;}
+
+
+.imgWrap .imgItem span a{display:block; color:#fff; font-size:40px; border:1px solid #fff; width:50px; height:50px; line-height:42px; border-radius:50%; }
+
+/* load more button css */
+.btn{width:100%; height:auto; text-align:center;}
+.btn button{background:#fff; display:inline-block; padding:10px 30px; margin:15px 0;} 
+
+/* detail page css */
+.detail{width:80%; margin:auto; height:auto;}  
+/* 내가여는화면 넓이의 60퍼센트 */
+.detail .imgBox{width:100%; height:100%; box-sizing:border-box; padding:20px 0; border-bottom :1px solid #ccc; position: relative;}
+.detail img{width:80%;}
+.detail .imgBox .navi{position:absolute; top:50%; width:100%; transform:translateY(-50%); display:flex; justify-content:space-between;}
+.detail .imgBox .navi button{color:#111; font-size:30px; display:inline-block; padding:10px; border-radius:0; background:#fff; outline:0;}
+.detail .txtBox{width:80%; margin:auto; padding:15px 0;}
+.detail .txtBox p{font-size:20px; margin:10px 0;}
+.detail .txtBox button,
+.detail .txtBox a{background:#fff; display:inline-block; padding:10px 30px; margin:15px 0; border:1px solid #111; color:#111;} 

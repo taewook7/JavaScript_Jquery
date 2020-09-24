@@ -1,0 +1,17 @@
+
+/* general css*/
+.wrap{width:100%; height:auto;}
+.clear:after{display:block; content:''; clear:both;}
+.center{width: 100%; max-width:1280px;  height:auto; margin:auto; }
+
+.section{padding:100px 0; box-sizing:border-box;}
+
+/* header css */
+header{background:#fff; width:100%; height:auto; }
+header .logo{width:150px; box-sizing:border-box; padding:15px 0;}
+header .logo img{width:100%;}
+
+
+/* main section css */
+.main{width:100%; height:60vh; overflow:hidden; position:relative;}    /* vh 는 어떤화면으로열든 그 화면높이의 60퍼센트   */
+.main img{width:100%; position:absolute; top:50%; transform:translateY(-50%);}
