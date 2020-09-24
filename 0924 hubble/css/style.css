@@ -1,0 +1,68 @@
+/* reset css*/
+*{margin:0; padding:0;}
+ol, ul {list-style:none;}
+a{text-decoration:none; color:#aaa;}
+
+/* general css*/
+/* 구글폰트 임베디드에서 CSS rules to specify families 소스 퍼온것이다. body에  */
+body{font-family: 'Montserrat', sans-serif; font-size:14px;}
+.wrap{width:100%; height:auto;}
+.clear:after{display:block; content:''; clear:both;}
+.center{width: 100%; max-width:1280px;  height:auto; margin:auto; }
+
+.section{padding:100px 0; box-sizing:border-box;}
+
+/* common button design css */
+.commonBtn{display:inline-block; color:#fff; padding:10px 30px; box-sizing:border-box; border:2px solid #fff;
+font-weight:500; transition: all 0.4s;}
+.commonBtn:hover{background:#1b1a23; border:2px solid #1b1a23;}
+
+/* common title design css */
+.commonTit{width:100%; height:auto; text-align:center;}
+.commonTit h1{font-size:30px; text-transform: uppercase; width:35%; margin:auto; position:relative; padding-bottom:15px;}
+
+/* 에프터는 태그 뒤에 붙는다. content 가 반드시 있어야함 */
+.commonTit h1:after{content:''; position:absolute; width:100%; height:2px; background:#1b1a23; width:100%; display:block; bottom:0;}
+
+
+.commonTit p{width:70%; margin:auto; line-height: 1.6; margin:15px auto; color:#1b1a23;}
+
+
+/* header css */
+header{background:#fff; width:100%; height:auto; }
+/* 센터와 헤더랩에게 적용 양쪽으로 퍼지고 로고는 여전히 중앙에 있다. */
+header .center.headerWrap{display:flex; justify-content:space-between; align-items:center;}
+
+header .logo{width:150px; box-sizing:border-box; padding:15px 0;}
+header .logo img{width:100%;}
+
+/*  옆으로 퍼지게 한다. */
+header .gnb li{float:left;}
+header .gnb li a{color:#1b1a23; text-transform:uppercase;
+     font-weight:500; box-sizing:border-box; padding:30px 30px; transition: all 0.3s;}
+header .gnb li a:hover{background:#1b1a23; color:#fff;}
+
+
+/* main section css */
+.main{width:100%; height:60vh; overflow:hidden; position:relative;}    /* vh 는 어떤화면으로열든 그 화면높이의 60퍼센트   */
+
+/* 딱 정중앙에 오게 되있다. */
+.main .mainTxt{width:100%; height:auto; position:absolute; top:50%; transform:translateY(-50%);}
+
+/*  */
+.main .mainTxt h2{font-size:35px; color:#fff; font-weight:700; text-transform: uppercase; 
+    text-shadow: 1px 1px 2px #aaa;}
+
+    /* h2하고 밑에 a 태그의 간격을 주기위해 p 태그에 마진을 주었다. 위아래로 15,20  */
+.main .mainTxt p{font-size:16px; font-weight:500; color:#fff; text-shadow:1px 1px 2px #aaa; 
+    margin:15px 0 20px 0;}
+
+.main img{width:100%; position:absolute; top:50%; transform:translateY(-50%);}
+
+
+
+/* about section css */
+.about .aboutTap{width:50%; height:auto; float:left;}
+.about .aboutTap .tab{width:50%; float:left; height:auto;}
+.about .aboutTap .tab img{width:100%;}
+.about .aboutPanel{width:50%; height:auto; float:right;}
