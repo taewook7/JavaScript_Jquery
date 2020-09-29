@@ -30,11 +30,11 @@ font-weight:500; transition: all 0.4s;}
 
 
 /* header css */
-header{background:#fff; width:100%; height:auto; }
+header{background:#fff; width:100%; height:auto; z-index:999; box-shadow: 0 0 3px #ccc;}
 /* 센터와 헤더랩에게 적용 양쪽으로 퍼지고 로고는 여전히 중앙에 있다. */
 header .center.headerWrap{display:flex; justify-content:space-between; align-items:center;}
 
-header .logo{width:150px; box-sizing:border-box; padding:15px 0;}
+header .logo{width:150px; box-sizing:border-box; padding:15px 0; transition: all 0.3s;}
 header .logo img{width:100%;}
 
 /*  옆으로 퍼지게 한다. */
@@ -42,6 +42,13 @@ header .gnb li{float:left;}
 header .gnb li a{color:#1b1a23; text-transform:uppercase;
      font-weight:500; box-sizing:border-box; padding:30px 30px; transition: all 0.3s;}
 header .gnb li a:hover{background:#1b1a23; color:#fff;}
+
+
+header.on{position:fixed;}
+header.on .logo{padding:10px 0;}
+header.on .gnb li a{padding:23px 30px;}
+
+
 
 
 /* main section css */
@@ -63,24 +70,24 @@ header .gnb li a:hover{background:#1b1a23; color:#fff;}
 
 
 /* about section css */
-.about .aboutTap{width:50%; height:auto; float:left;}
-.about .aboutTap .tab{width:50%; float:left; height:auto; box-sizing:border-box; padding:5px;}
+.about .aboutTab{width:50%; height:auto; float:left;}
+.about .aboutTab .tab{width:50%; float:left; height:auto; box-sizing:border-box; padding:5px;}
 /* 각각의 사진들로 나뉘어진다.. box-sizing 하고 패딩을 주면  , 바깥에 있는 선이다.border:1px solid 를 지웠다. */
-.about .aboutTap .tab>div{width:100%; height:100%; box-sizing:border-box; padding:5px; box-shadow:0 0 3px #111;
+.about .aboutTab .tab>div{width:100%; height:100%; box-sizing:border-box; padding:5px; box-shadow:0 0 3px #111;
 position:relative;}
 /* tab의 자식 div 에 이렇게 설정해주면 선이 또 생긴다.. 안족에있는 선이고 border:1px solid 를 지우고  박스 쉐도우를 써서 그림자로 만들었다. */
-.about .aboutTap .tab>div>.overlay{position: absolute; width:100%; height: 100%; background:rgba(255,255,255,0.6);
+.about .aboutTab .tab>div>.overlay{position: absolute; width:100%; height: 100%; background:rgba(255,255,255,0.6);
  display:block; left:0; top:0; opacity:0; transition: all 0.3s;}
  /* 배경을 하얗게 만들어주었다. opacity 를 0으로 두었더니 다 사라졌다.  */
 
- .about .aboutTap .tab>div>.overlay>.commonBtn{position: absolute; background:#1b1a23; color:#fff; left:50%; top:50%; transform:translate(-50%,-50%)}
+ .about .aboutTab .tab>div>.overlay>.commonBtn{position: absolute; background:#1b1a23; color:#fff; left:50%; top:50%; transform:translate(-50%,-50%)}
  /* 버튼을 중앙으로 가게 하기 위해서 왼쪽50% 위에서 50%   */
 
-.about .aboutTap .tab img{width:100%;}
+.about .aboutTab .tab img{width:100%;}
 .about .aboutPanel{width:50%; height:auto; float:right; box-sizing:border-box; padding:5px 0 0 30px;}
 
 
-.about .aboutTap .tab:hover>div>.overlay{opacity: 1;}
+.about .aboutTab .tab:hover>div>.overlay{opacity: 1;}
 /* 탭에다가 hover 를 두면 그의 자식에게 적용된다. */
 
 .about .imgPanel{ width:100%; height:350px; box-sizing: border-box; border:5px solid #fff; box-shadow: 0 0 3px #111; overflow:hidden; transform: translateY(30px); opacity: 0; animation:fadeUp-1 0.5s 1; animation-fill-mode: forwards;}
@@ -120,3 +127,19 @@ position:relative;}
 
 .about .panelCon{width:100%; height:auto; box-sizing:border-box;}
 .about .panelCon p{font-size:13px; line-height: 1.4; margin-top:10px; color:#aaa;}
+
+/* images section css */
+.images{background:#1b1a23;}
+.images .commonTit h1{color: #fff;}
+.commonTit h1:after{background:#fff;}
+.images .commonTit p{color:#fff;}
+.images .commonTit .commonBtn{background:#1b1a23;}
+.images .commonTit .commonBtn:hover{background:#fff; color:#1b1a23;}
+
+.images .imgBox{width:100%; height:auto; margin-top:30px;}
+.images .imgBox .imgItem{float:left; width:25%; box-sizing:border-box; padding:5px;}
+.images .imgBox .imgItem img{width:100%; filter:grayscale(100%); transition: all 0.4s;}
+
+.images .imgBox .imgItem>div{width:100%; height:100%; box-sizing:border-box; border:5px solid #fff; overflow:hidden;}
+
+.images .imgBox .imgItem:hover img{filter:grayscale(0);}
