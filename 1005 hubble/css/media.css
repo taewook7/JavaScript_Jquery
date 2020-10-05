@@ -1,0 +1,22 @@
+@media screen and (max-width: 1280px) {
+    .center{box-sizing:border-box; padding:0 15px;}
+  }
+  
+
+  @media screen and (max-width: 850px) {
+    header .gnb li a{padding:30px 20px;}
+
+}
+
+@media screen and (max-width: 750px) {
+    /* 크기를 줄이면 오른쪽에 투명한 창이 나옴  z-index가 왜 998 로 줬냐면 */
+    .gnb{display:block; position:fixed; width:70%; height:100%; top:0; right: -70%; background:rgba(0, 0, 0, 0.8); z-index:998; box-sizing: border-box; padding:100px 0;}
+
+    /* 헤더 리스트들이 한곳에 몰린다. text-align으로 오른쪽으로 글씨를 보낸다 */
+    header .gnb li{float:none; width:100%; box-sizing: border-box; _padding:30px 0; text-align:right; }
+    header .gnb li a{width:100%; display:block; color:#fff; padding:20px;}
+    header .gnb li a:hover{background:#fff; color:#1b1a23;}
+    .mobileGnb{display:block;}
+}
+
+  

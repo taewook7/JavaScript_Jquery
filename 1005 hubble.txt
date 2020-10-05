@@ -1,0 +1,43 @@
+모니터의 맨위는 offset top 이다. 
+화면이 마지막인걸 어떻게아냐면 웹의 높이-지금 화면의높이를 빼주면
+현재 화면 상단의 높이를 알수 있다.
+
+api 로 사진가져오는걸 할건데
+쓸게많아서 js 폴더에 파일을 하나 생성했다. getApi.js
+
+
+구글에 hubble api 검색 
+http://hubblesite.org/api/documentation  접속
+
+/api/v3/image/200 찾는다. 제이슨으로 되어있다..
+
+json formatter 구글 검색
+https://jsonformatter.curiousconcept.com/ 접속
+
+제이슨을 보기쉽게 해주는 사이트 이다.
+
+$(document).ready(function(){
+    $.ajax({
+        url:'http://hubblesite.org/api/v3/image/200',
+        dataType:'jsonp',
+        success:function(data){
+            console.log(data);
+        }
+    });
+});
+
+
+사진을 자연스럽게 높이가 각각 다르게 배치하고싶으면
+masonry 을 이용해야한다.
+
+반응형 웹을 만들기 위한 css  media.css 파일 생성
+구글에 css media query 검색 
+
+media 스타일은 항상 기존스타일보다 아래쪽에 적어줘야한다. link 할때
+
+슬라이더 관련
+owl carousel  랑 lightSlider 공식홈페이지 잘되있으니 참고
+https://codepen.io/sachinchoolur/pen/Ihoev   
+
+
+_padding:30px 0;  죽여버리는 코드이다.. 주석처리할필요없이
