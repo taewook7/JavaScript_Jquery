@@ -1,14 +1,43 @@
 @media screen and (max-width: 1280px) {
     .center{box-sizing:border-box; padding:0 15px;}
+    .about .aboutTab{display:none;}
+
+    /* width 가 100%가 되면 float 을 none 으로해서  가운데 올수있게한다.  */
+    .about .aboutPanel{width:100%; float:none; padding:5px 0;}
+    .about .imgPanel{height:350px!important;}
+  
+    /* 화면이 줄어들면 버튼4개가 나타나게 한다 */
+    .mobileTab{display:block;}
   }
   
+  @media screen and (max-width: 1150px) {
+    .main{height:40vh;}
+    .images .imgBox .imgItem{width:33.33%;}
+  
+  }
+
+
 
   @media screen and (max-width: 850px) {
     header .gnb li a{padding:30px 20px;}
 
+    .commonTit h1{font-size:25px; width:50%;}
+    .commonTit p{width:90%;}
+
+    .images .imgBox .imgItem{width:50%;}
 }
 
+
+
+
+
+
+
 @media screen and (max-width: 750px) {
+
+  /* 섹션간의 간격을 750px 일때 100 에서 60px 로 줄인다. */
+  .section{padding:45px 0;}
+
     /* 크기를 줄이면 오른쪽에 투명한 창이 나옴  z-index가 왜 998 로 줬냐면 */
     .gnb{display:block; position:fixed; width:70%; height:100%; top:0; right: -70%; background:rgba(0, 0, 0, 0.8); z-index:998; box-sizing: border-box; padding:100px 0;}
 
@@ -16,7 +45,37 @@
     header .gnb li{float:none; width:100%; box-sizing: border-box; _padding:30px 0; text-align:right; }
     header .gnb li a{width:100%; display:block; color:#fff; padding:20px;}
     header .gnb li a:hover{background:#fff; color:#1b1a23;}
-    .mobileGnb{display:block;}
+    .mobileGnb{display:block; width:18px; height:18px;}
+    header .logo{width:120px;}
+
+    .about .txtPanel{text-align:center;}
+    .about .panelTit p{padding-left:0; border-left:none;}
+
+    .mobileTab button{width:50%; margin-top:1px;}
+    .mobileTab button:nth-child(3){border-left:1px solid #1b1a23;}
+
+
+    .images .imgBox .imgItem{height:200px;}
+
 }
 
   
+
+@media screen and (max-width: 500px) {
+  .commonBtn{font-size:12px; padding:8px 25px;}
+
+
+  .commonTit h1{font-size:20px; width:50%;}
+    .commonTit p{font-size:12px;}
+    
+  .about .panelTit h2{font-size:20px;}
+  .about .imgPanel{height:250px;}
+
+  .images .imgBox .imgItem{height:150px;}
+  .images .imgBox .imgItem>div{border:2px solid #fff;}
+}
+
+
+@media screen and (max-width: 350px) {
+  .images .imgBox .imgItem{height:120px;}
+}

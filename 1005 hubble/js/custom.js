@@ -13,9 +13,19 @@ $( document ).ready(function() {
             $(".imgPanel").outerHeight(tabHeight);
         });
     }
+    fitHeight();
+
 // 리사이즈를 통해서 화면을 줄여도 왼쪽 div 높이하고 계속 똑같이 유지 된다.
 
-    fitHeight();
+    // $(window).resize(fuction() {
+    //     var winWidth=$(this).width();
+    //     if(winWidth > 1280) {
+    //         fitHeight();
+    //     } else {
+    //         $(".imgPanel").css({height:'350px'});
+    //     }
+    // });
+    
 
 
 
@@ -36,6 +46,12 @@ $( document ).ready(function() {
     // alert(tabIndex);
     $(".panelBox").hide();
         $(".panelBox").eq(tabIndex).show();
+    });
+
+    $(".mobileTab button").click(function() {
+        var mTabIndex = $(this).index();
+        $(".panelBox").hide();
+        $(".panelBox").eq(mTabIndex).show();
     });
 
     $(".aboutTab .tab").eq(0).find(".commonBtn").trigger("click"); 

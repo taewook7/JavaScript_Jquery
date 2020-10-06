@@ -67,7 +67,7 @@ header.on .gnb li a{padding:23px 30px;}
 
 
 /* main section css */
-.main{width:100%; height:60vh; overflow:hidden; position:relative;}    /* vh 는 어떤화면으로열든 그 화면높이의 60퍼센트   */
+.main{width:100%; height:60vh; overflow:hidden; position:relative; background: #ddd;}    /* vh 는 어떤화면으로열든 그 화면높이의 60퍼센트   */
 
 /* 딱 정중앙에 오게 되있다. */
 .main .mainTxt{width:100%; height:auto; position:absolute; top:50%; transform:translateY(-50%);}
@@ -143,10 +143,24 @@ position:relative;}
 .about .panelCon{width:100%; height:auto; box-sizing:border-box;}
 .about .panelCon p{font-size:13px; line-height: 1.4; margin-top:10px; color:#aaa;}
 
+
+/* mobile tabs css */
+.mobileTab{width:100%; height:auto; text-align:center; padding:10px 0; box-sizing:border-box; display:none;}
+
+/* 구분을 짓기위해 border-left 를 두었다 한번에 보이지않게하기위해 
+outline 은 눌렀을때 아무효과도 없게 할때  */
+.mobileTab button{display:block; border:1px solid #1b1a23; color:#fff; background: #1b1a23; float:left; width:25%; padding:10px 0; box-sizing: border-box;
+border-left:1px solid #fff; outline:0; transition:all 0.4s;} 
+
+.mobileTab button:hover{border:1px solid #1b1a23; background: #fff; color:#1b1a23;}
+
+/* 맨왼쪽으로 흰색이 쏠렸기 때문에 첫번째 버튼에만 검은색으로 해주었다 버튼이 4개이므로 형제중에 첫번째에게만 적용 */
+.mobileTab button:nth-child(1){border-left:1px solid #1b1a23;}
+
 /* images section css */
 .images{background:#1b1a23;}
 .images .commonTit h1{color: #fff;}
-.commonTit h1:after{background:#fff;}
+.images .commonTit h1:after{background:#fff;}
 .images .commonTit p{color:#fff;}
 .images .commonTit .commonBtn{background:#1b1a23;}
 .images .commonTit .commonBtn:hover{background:#fff; color:#1b1a23;}
