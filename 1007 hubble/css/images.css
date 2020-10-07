@@ -1,0 +1,18 @@
+/* images page css */
+section.allImages{background: #fff;}
+
+section.allImages .commonTit h1{color:#1b1a23;}
+section.allImages .commonTit h1:after{background:#1b1a23;}
+
+section.allImages .commonTit p{color:#1b1a23;}
+
+.allImgItem>div{box-shadow: 0 0 5px #111;}
+
+/* 위아래를 떨어뜨리기 위해 패딩 */
+/* 가운데로 가게 하기위해 text-align */
+
+.btnBox{width:100%; height:auto; text-align:center; box-sizing: border-box; padding:15px 0}
+
+
+/* 아웃라인을 넣으면 클릭을해도 한지 모른다. */
+.loadMore{background:#1b1a23; border:2px solid #1b1a23; outline:0;}
