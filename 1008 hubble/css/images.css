@@ -1,0 +1,37 @@
+/* images page css */
+section.allImages{background: #fff;}
+
+section.allImages .commonTit h1{color:#1b1a23;}
+section.allImages .commonTit h1:after{background:#1b1a23;}
+
+section.allImages .commonTit p{color:#1b1a23;}
+
+.allImgItem>div{box-shadow: 0 0 5px #111;}
+
+/* 위아래를 떨어뜨리기 위해 패딩 */
+/* 가운데로 가게 하기위해 text-align */
+
+.btnBox{width:100%; height:auto; text-align:center; box-sizing: border-box; padding:15px 0}
+
+
+/* 아웃라인을 넣으면 클릭을해도 한지 모른다. */
+.loadMore{background:#1b1a23; border:2px solid #1b1a23; outline:0;}
+
+
+/* images detail page css  */
+.detailTit{width:70%; margin:auto; height:auto; box-sizing:border-box; padding:15px 0; text-align:center; font-size:30px; position: relative; margin-bottom:15px;}
+
+.detailTit:after{width:10%; height:2px; background:#1b1a23; position:absolute; bottom:0; left:50%; transform: translateX(-50%); content:'';}
+
+.detailImg{width:80%; height:50vh; margin:auto; position:relative; box-shadow: 0 0 3px #111; overflow:hidden; box-sizing: border-box;  border:5px solid #fff;}
+.detailImg img{position: absolute; top:0; left:50%; transform: translateX(-50%); height:100%;}
+
+.detailDesc{padding:0 30px; box-sizing: border-box; width:80%; line-height: 1.6; margin:auto; color:#1b1a23; position: relative; box-sizing: border-box; padding:0 30px;}
+.detailDesc:before{position: absolute; width:2px; height:30%; background: #1b1a23; content:''; left:0; top:50%; transform: translateY(-50%);}
+.detailDesc:after{position: absolute; width:2px; height:30%; background: #1b1a23; content:''; right:0; top:50%; transform: translateY(-50%);}
+
+
+.detailBtn .commonBtn{background:#1b1a23; border:2px solid #1b1a23; outline:0;}
+
+.detailBtn .commonBtn.prev,
+.detailBtn .commonBtn.next{font-size:25px; font-weight: 500; padding:10px 20px;}
