@@ -1,0 +1,174 @@
+/* reset css*/
+*{margin:0; padding:0;}
+ol, ul {list-style:none;}
+a{text-decoration:none; color:#aaa;}
+
+/* general css*/
+/* 구글폰트 임베디드에서 CSS rules to specify families 소스 퍼온것이다. body에  */
+body{font-family: 'Montserrat', sans-serif; font-size:14px;}
+img{display:block}
+.wrap{width:100%; height:auto;}
+.clear:after{display:block; content:''; clear:both;}
+.center{width: 100%; max-width:1280px;  height:auto; margin:auto; }
+
+.section{padding:100px 0; box-sizing:border-box;}
+
+/* common button design css */
+.commonBtn{display:inline-block; color:#fff; padding:10px 30px; box-sizing:border-box; border:2px solid #fff;
+font-weight:500; transition: all 0.4s;}
+.commonBtn:hover{background:#1b1a23; border:2px solid #1b1a23;}
+
+/* common title design css */
+.commonTit{width:100%; height:auto; text-align:center;}
+.commonTit h1{font-size:30px; text-transform: uppercase; width:35%; margin:auto; position:relative; padding-bottom:15px;}
+
+/* 에프터는 태그 뒤에 붙는다. content 가 반드시 있어야함 */
+.commonTit h1:after{content:''; position:absolute; width:100%; height:2px; background:#1b1a23; width:100%; display:block; bottom:0;}
+
+
+.commonTit p{width:70%; margin:auto; line-height: 1.6; margin:15px auto; color:#1b1a23;}
+
+
+/* header css */
+header{background:#fff; width:100%; height:auto; z-index:999; box-shadow: 0 0 3px #ccc;}
+/* 센터와 헤더랩에게 적용 양쪽으로 퍼지고 로고는 여전히 중앙에 있다. */
+header .center.headerWrap{display:flex; justify-content:space-between; align-items:center;}
+
+header .logo{width:150px; box-sizing:border-box; padding:15px 0; transition: all 0.3s;}
+header .logo img{width:100%;}
+
+/*  옆으로 퍼지게 한다. */
+header .gnb li{float:left;}
+header .gnb li a{color:#1b1a23; text-transform:uppercase;
+     font-weight:500; box-sizing:border-box; padding:30px 30px; transition: all 0.3s;}
+header .gnb li a:hover,
+header .gnb li.active a{background:#1b1a23; color:#fff;}
+
+
+header.on{position:fixed;}
+header.on .logo{padding:10px 0;}
+header.on .gnb li a{padding:23px 30px;}
+
+
+
+/* mobileGnb navigation icon css */
+
+/* 0.4초동안 돌아가게 한다. display none 으로 안보이게 설정하고 화면을 줄이면 보이게 한다. */
+.mobileGnb{width:23px; height:23px; float:right; position: relative; margin-right: 15px; transition: all 0.4s; display:none; z-index:9999;}
+/* 조금더그럴듯하게 돌아가게 하기 위해서 135도로 설정해주었고  */
+.mobileGnb.rotate{transform:rotate(135deg);} 
+
+.mobileGnb span{display:block; background:#1b1a23; position: absolute;}
+
+.mobileGnb span.whiteColor{background: #fff; transition: all 0.4s;}
+
+.mobileGnb span:nth-child(1){width: 100%; height: 2px; top:50%; transform:translateY(-50%);}
+.mobileGnb span:nth-child(2){height:100%; width: 2px; left:50%; transform:translateX(-50%);}
+
+
+/* main section css */
+.main{width:100%; height:60vh; overflow:hidden; position:relative; background: #ddd;}    /* vh 는 어떤화면으로열든 그 화면높이의 60퍼센트   */
+
+/* 딱 정중앙에 오게 되있다. */
+.main .mainTxt{width:100%; height:auto; position:absolute; top:50%; transform:translateY(-50%);}
+
+/*  */
+.main .mainTxt h2{font-size:35px; color:#fff; font-weight:700; text-transform: uppercase; 
+    text-shadow: 1px 1px 2px #aaa;}
+
+    /* h2하고 밑에 a 태그의 간격을 주기위해 p 태그에 마진을 주었다. 위아래로 15,20  */
+.main .mainTxt p{font-size:16px; font-weight:500; color:#fff; text-shadow:1px 1px 2px #aaa; 
+    margin:15px 0 20px 0;}
+
+.main img{width:100%; position:absolute; top:50%; transform:translateY(-50%);}
+
+
+
+/* about section css */
+.about .aboutTab{width:50%; height:auto; float:left;}
+.about .aboutTab .tab{width:50%; float:left; height:auto; box-sizing:border-box; padding:5px;}
+/* 각각의 사진들로 나뉘어진다.. box-sizing 하고 패딩을 주면  , 바깥에 있는 선이다.border:1px solid 를 지웠다. */
+.about .aboutTab .tab>div{width:100%; height:100%; box-sizing:border-box; padding:5px; box-shadow:0 0 3px #111;
+position:relative;}
+/* tab의 자식 div 에 이렇게 설정해주면 선이 또 생긴다.. 안족에있는 선이고 border:1px solid 를 지우고  박스 쉐도우를 써서 그림자로 만들었다. */
+.about .aboutTab .tab>div>.overlay{position: absolute; width:100%; height: 100%; background:rgba(255,255,255,0.6);
+ display:block; left:0; top:0; opacity:0; transition: all 0.3s;}
+ /* 배경을 하얗게 만들어주었다. opacity 를 0으로 두었더니 다 사라졌다.  */
+
+ .about .aboutTab .tab>div>.overlay>.commonBtn{position: absolute; background:#1b1a23; color:#fff; left:50%; top:50%; transform:translate(-50%,-50%)}
+ /* 버튼을 중앙으로 가게 하기 위해서 왼쪽50% 위에서 50%   */
+
+.about .aboutTab .tab img{width:100%;}
+.about .aboutPanel{width:50%; height:auto; float:right; box-sizing:border-box; padding:5px 0 0 30px;}
+
+
+.about .aboutTab .tab:hover>div>.overlay{opacity: 1;}
+/* 탭에다가 hover 를 두면 그의 자식에게 적용된다. */
+
+.about .imgPanel{ width:100%; height:350px; box-sizing: border-box; border:5px solid #fff; box-shadow: 0 0 3px #111; overflow:hidden; transform: translateY(30px); opacity: 0; animation:fadeUp-1 0.5s 1; animation-fill-mode: forwards;}
+/* 부모크기만큼 줘야하니까 위드를 100%로 한다. */
+
+
+
+.about .imgPanel img{width:100%; }
+/* width=사진이 지 부모만큼 맞춰진다.  */
+
+
+
+.about .txtPanel{width:100%; height:auto; padding:10px 0; box-sizing:border-box; transform: translateY(30px); opacity: 0; animation:fadeUp-2 0.5s 1;animation-fill-mode: forwards; animation-delay: 0.5s;}
+/* 위 div 하고 간격을 주기 위한 css */
+
+
+@keyframes fadeUp-1 {
+    0%{transform: translateY(30px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeUp-2 {
+    0%{transform: translateY(30px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+
+
+
+.about .txtPanel .panelTit{width:100%; height:auto; margin-top:20px;}
+/* 제목이 아래쪽으로 조금 떨어질 것이다.     */
+
+
+.about .panelTit h2{font-size:25px; text-transform: uppercase;}
+
+
+.about .panelTit p{line-height:1.6; font-weight:400; box-sizing:border-box; padding-left:20px; border-left:2px solid #1b1a23;}
+
+.about .panelCon{width:100%; height:auto; box-sizing:border-box;}
+.about .panelCon p{font-size:13px; line-height: 1.4; margin-top:10px; color:#aaa;}
+
+
+/* mobile tabs css */
+.mobileTab{width:100%; height:auto; text-align:center; padding:10px 0; box-sizing:border-box; display:none;}
+
+/* 구분을 짓기위해 border-left 를 두었다 한번에 보이지않게하기위해 
+outline 은 눌렀을때 아무효과도 없게 할때  */
+.mobileTab button{display:block; border:1px solid #1b1a23; color:#fff; background: #1b1a23; float:left; width:25%; padding:10px 0; box-sizing: border-box;
+border-left:1px solid #fff; outline:0; transition:all 0.4s;} 
+
+.mobileTab button:hover{border:1px solid #1b1a23; background: #fff; color:#1b1a23;}
+
+/* 맨왼쪽으로 흰색이 쏠렸기 때문에 첫번째 버튼에만 검은색으로 해주었다 버튼이 4개이므로 형제중에 첫번째에게만 적용 */
+.mobileTab button:nth-child(1){border-left:1px solid #1b1a23;}
+
+/* images section css */
+.images{background:#1b1a23;}
+.images .commonTit h1{color: #fff;}
+.images .commonTit h1:after{background:#fff;}
+.images .commonTit p{color:#fff;}
+.images .commonTit .commonBtn{background:#1b1a23;}
+.images .commonTit .commonBtn:hover{background:#fff; color:#1b1a23;}
+
+.images .imgBox{width:100%; height:auto; margin-top:30px;}
+.images .imgBox .imgItem{float:left; width:25%; box-sizing:border-box; padding:5px; height:250px; cursor: pointer;}
+.images .imgBox .imgItem img{width:100%; filter:grayscale(100%); transition: all 0.4s;}
+
+.images .imgBox .imgItem>div{width:100%; height:100%; box-sizing:border-box; border:5px solid #fff; overflow:hidden;}
+
+.images .imgBox .imgItem:hover img{filter:grayscale(0);}
