@@ -1,0 +1,22 @@
+10월13일
+슬라이드 기능 구현 
+
+index.html 에 owl.carousel  스크립트 추가 
+css/owl.carousel.min.css 스타일도 추가
+
+섹션클래스에 owl-carousel owl-theme 추가 + item 클래스를 가진 div 추가
+
+custom.js 에 
+owl-carousel 추가 
+$('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                dots:true,
+                autoplay:true,
+                autoplayTimeout:2000,
+
+                items:1,
+});
+
+css 에 _height 로 하면 지우는거랑 똑같다 주석처리 
